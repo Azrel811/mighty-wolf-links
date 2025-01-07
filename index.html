@@ -34,13 +34,35 @@
         nav a:hover {
             color: #58a6ff;
         }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background-image: url('https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Background_More_Green_Adjusted.png?raw=true'); /* Add your circuit board background */
-            background-size: cover;
-            background-position: center;
-        }
+    .logo-container {
+    position: relative;
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    margin: 0 auto -60px; /* Centers the logo and overlaps it with the hero section */
+    border: 4px solid #ffffff; /* White circular border */
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    background-color: #161b22; /* Optional background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the logo fits well in the circle */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Background_More_Green_Adjusted.png?raw=true'); /* Add your circuit board background */
+    background-size: cover;
+    background-position: center;
+}
         .hero h1 {
     font-size: 3rem;
     color: #ffffff; /* Change the text color to white */
@@ -124,7 +146,6 @@
 <body>
     <!-- Header Section -->
     <header>
-        <img src="https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Logo_GitHub_Ready.png?raw=true" alt="Mighty Wolf Logo">
         <nav>
             <a href="#">Home</a>
             <a href="#">Projects</a>
@@ -135,6 +156,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
+    <div class="logo-container">
+        <img src="https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Logo_GitHub_Ready.png?raw=true" alt="Mighty Wolf Logo">
+    </div>
         <h1>Welcome to Mighty Wolf Tech</h1>
         <p>Innovating the Future, One Project at a Time</p>
         <button>Explore Projects</button>
