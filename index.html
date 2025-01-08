@@ -89,19 +89,15 @@
         .hero button:hover {
             background-color: #1f6feb;
         }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 50px;
-        }
-      .project-card {
+        .project-card {
     background-color: #161b22;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 250px; /* Set a uniform width for all cards */
+    margin: auto; /* Centers the card */
 }
 
 .project-card:hover {
@@ -110,11 +106,19 @@
 }
 
 .project-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* Ensures the image fits the card width */
+    height: 150px; /* Set a uniform height */
+    object-fit: cover; /* Ensures the image scales proportionally to fit */
+    border-radius: 10px; /* Optional: Matches the card’s rounded corners */
     margin-bottom: 15px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between the cards */
+    padding: 50px;
 }
 
 .project-button {
