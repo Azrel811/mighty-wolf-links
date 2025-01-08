@@ -57,38 +57,44 @@
 }
 
 .hero {
-    position: relative;
-    text-align: center;
-    padding: 100px 20px;
-    background-image: url('https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Background_More_Green_Adjusted.png?raw=true'); /* Add your circuit board background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Reduced padding */
+    background-image: url('https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Background_More_Green_Adjusted.png?raw=true'); /* Circuit board background */
     background-size: cover;
     background-position: center;
-}
-        .hero h1 {
-    font-size: 3rem;
-    color: #ffffff; /* Change the text color to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
-    -webkit-text-stroke: 1px #000000; /* Optional: Add a black border outline */
+    height: 200px; /* Reduced height */
+    color: #ffffff;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    color: #ffffff; /* Change the text color to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and text */
 }
-        .hero button {
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 1rem;
-            background-color: #58a6ff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #fff;
-        }
-        .hero button:hover {
-            background-color: #1f6feb;
-        }
+
+.hero-logo {
+    width: 100px; /* Adjust logo size */
+    height: 100px;
+    object-fit: contain; /* Ensures the entire logo is visible */
+    border-radius: 50%; /* Optional: circular logo */
+}
+
+.hero-text {
+    text-align: left; /* Align text to the left */
+}
+
+.hero-text h1 {
+    font-size: 1.8rem; /* Adjust font size */
+    color: #ffffff;
+}
+
+.hero-text p {
+    font-size: 1rem; /* Adjust font size for slogan */
+    color: #8b949e;
+}
+
         .project-card {
     background-color: #161b22;
     border-radius: 10px;
@@ -106,10 +112,10 @@
 }
 
 .project-image {
-    width: 100%; /* Ensures the image fits the card width */
-    height: 150px; /* Set a uniform height */
-    object-fit: cover; /* Ensures the image scales proportionally to fit */
-    border-radius: 10px; /* Optional: Matches the card’s rounded corners */
+    width: 300px; /* Fixed width */
+    height: 225px; /* Fixed height */
+    object-fit: cover; /* Keeps the aspect ratio */
+    border-radius: 10px; /* Optional: Matches card corners */
     margin-bottom: 15px;
 }
 
@@ -188,15 +194,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-    <div class="logo-container">
-        <img src="https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Logo_GitHub_Ready.png?raw=true" alt="Mighty Wolf Logo">
+   <section class="hero">
+    <div class="hero-content">
+        <img src="https://github.com/Azrel811/mighty-wolf-links/blob/main/Mighty_Wolf_Tech_Logo_GitHub_Ready.png?raw=true" alt="Mighty Wolf Logo" class="hero-logo">
+        <div class="hero-text">
+            <h1>Welcome to Mighty Wolf Tech</h1>
+            <p>Innovating the Future, One Project at a Time</p>
+        </div>
     </div>
-        <h1>Welcome to Mighty Wolf Tech</h1>
-        <p>Innovating the Future, One Project at a Time</p>
-        <button>Explore Projects</button>
-        <button>Contact Us</button>
-    </section>
+</section>
 
     <!-- Social Media Section -->
     <section class="social-media">
